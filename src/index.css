@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-text-primary font-sans;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block bg-transparent text-accent px-8 py-3 border border-accent rounded font-mono text-sm no-underline transition-all duration-300 hover:bg-accent/10 hover:-translate-y-1;
+  }
+  
+  .section-title {
+    @apply font-mono text-accent text-xl md:text-2xl mb-10 flex items-center;
+  }
+  
+  .section-title::before {
+    content: "> ";
+    @apply mr-2;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply block h-px bg-text-secondary/50 ml-5 flex-1;
+  }
+  
+  .tech-item {
+    @apply bg-accent/10 text-accent px-4 py-2 rounded font-mono text-sm border border-accent/20;
+  }
+  
+  .project-card {
+    @apply bg-secondary/70 rounded-lg overflow-hidden transition-all duration-300 border border-terminal-border hover:border-accent hover:-translate-y-2 hover:shadow-xl;
+  }
+  
+  .article-card {
+    @apply bg-secondary/70 rounded-lg overflow-hidden transition-all duration-300 border border-terminal-border hover:border-accent hover:-translate-y-1 hover:shadow-lg;
+  }
+}
