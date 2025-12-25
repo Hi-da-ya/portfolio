@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar';
+import React from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope, FaGlobe } from 'react-icons/fa';
 
 const Header = () => {
   const handleViewWork = (e) => {
@@ -19,36 +19,77 @@ const Header = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center pt-20 md:pt-0">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="w-full">
-          <div className="name-title mb-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-2">
-              Hidaya Vanessa
-            </h1>
-            <h2 className="text-xl md:text-2xl font-semibold text-accent mb-4 font-mono">
-              Software Developer
-            </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mb-10">
-              I build robust software systems and scalable applications.
-            </p>
-            
-            <div className="h-px bg-gradient-to-r from-accent to-transparent w-48 my-10"></div>
-            
-            <div className="header-actions flex flex-col md:flex-row gap-4 mb-16">
-              <button onClick={handleViewWork} className="btn">
-                View My Work
-              </button>
-              <button onClick={handleContactMe} className="btn">
-                Contact Me
-              </button>
-            </div>
-          </div>
-          
-          < Navbar />
-        </div>
+    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+      <div className="greeting text-accent text-sm md:text-base mb-2 font-mono">
+        Hello, my name is
       </div>
-    </section>
+      
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-3">
+        Hidaya Vanessa
+      </h1>
+      
+      <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-text-primary mb-4 font-mono">
+        Software Developer
+      </h2>
+      
+      <p className="text-text-secondary text-base md:text-lg mb-8 max-w-lg">
+        I build robust software systems and scalable applications.
+      </p>
+      
+      {/* Social Icons */}
+      <div className="flex gap-4 mb-8">
+        <a 
+          href="https://github.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-text-primary hover:text-accent transition-colors duration-300"
+          aria-label="GitHub"
+        >
+          <FaGithub size={24} />
+        </a>
+        <a 
+          href="https://linkedin.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-text-primary hover:text-accent transition-colors duration-300"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin size={24} />
+        </a>
+        <a 
+          href="mailto:your.email@example.com" 
+          className="text-text-primary hover:text-accent transition-colors duration-300"
+          aria-label="Email"
+        >
+          <FaEnvelope size={24} />
+        </a>
+        <a 
+          href="https://yourwebsite.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-text-primary hover:text-accent transition-colors duration-300"
+          aria-label="Website"
+        >
+          <FaGlobe size={24} />
+        </a>
+      </div>
+      
+      {/* Action Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4">
+        <button 
+          onClick={handleViewWork} 
+          className="bg-accent text-primary px-8 py-3 rounded font-mono text-sm font-semibold transition-all duration-300 hover:bg-accent/90 hover:-translate-y-1"
+        >
+          View My Work
+        </button>
+        <button 
+          onClick={handleContactMe} 
+          className="bg-transparent text-text-primary px-8 py-3 rounded font-mono text-sm border border-text-primary/30 transition-all duration-300 hover:border-accent hover:text-accent hover:-translate-y-1"
+        >
+          Contact Me
+        </button>
+      </div>
+    </div>
   );
 };
 
