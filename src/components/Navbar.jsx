@@ -61,7 +61,7 @@ const Navbar = () => {
               className="logo font-mono text-accent text-xl font-bold hover:opacity-80 transition-opacity duration-300"
               aria-label="Back to home"
             >
-              <span className="text-accent">&gt; </span>backendDev
+              <span className="text-accent">&gt; </span>softwareDev
             </a>
           </div>
 
