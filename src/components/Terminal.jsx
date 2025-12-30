@@ -47,7 +47,7 @@ const Terminal = () => {
 
   return (
     <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-      <div className="terminal-container bg-terminal-bg rounded-lg overflow-hidden shadow-2xl border border-terminal-border w-full max-w-2xl">
+      <div className="terminal-container bg-terminal-bg rounded-lg overflow-hidden shadow-2xl border border-terminal-border w-full max-w-2xl hover:border-accent/50 transition-all duration-300">
         <div className="terminal-window">
           <div className="terminal-top-bar bg-secondary px-5 py-3 flex items-center justify-between border-b border-terminal-border">
             <div className="terminal-title font-mono text-text-secondary text-sm">

@@ -24,15 +24,15 @@ const Header = () => {
         Hello, my name is
       </div>
       
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-3">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-text-primary mb-3 leading-tight">
         Hidaya Vanessa
       </h1>
       
-      <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-text-primary mb-4 font-mono">
+      <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-text-primary mb-4 font-mono">
         Software Developer
       </h2>
       
-      <p className="text-text-secondary text-base md:text-lg mb-8 max-w-lg">
+      <p className="text-text-secondary text-base md:text-lg lg:text-xl mb-8 max-w-lg leading-relaxed">
         I build robust software systems and scalable applications.
       </p>
       
@@ -42,7 +42,7 @@ const Header = () => {
           href="https://github.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-text-primary hover:text-accent transition-colors duration-300"
+          className="text-text-primary hover:text-accent transition-all duration-300 hover:-translate-y-1"
           aria-label="GitHub"
         >
           <FaGithub size={24} />
@@ -51,14 +51,14 @@ const Header = () => {
           href="https://linkedin.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-text-primary hover:text-accent transition-colors duration-300"
+          className="text-text-primary hover:text-accent transition-all duration-300 hover:-translate-y-1"
           aria-label="LinkedIn"
         >
           <FaLinkedin size={24} />
         </a>
         <a 
           href="mailto:your.email@example.com" 
-          className="text-text-primary hover:text-accent transition-colors duration-300"
+          className="text-text-primary hover:text-accent transition-all duration-300 hover:-translate-y-1"
           aria-label="Email"
         >
           <FaEnvelope size={24} />
@@ -67,7 +67,7 @@ const Header = () => {
           href="https://yourwebsite.com" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-text-primary hover:text-accent transition-colors duration-300"
+          className="text-text-primary hover:text-accent transition-all duration-300 hover:-translate-y-1"
           aria-label="Website"
         >
           <FaGlobe size={24} />
@@ -78,13 +78,13 @@ const Header = () => {
       <div className="flex flex-col sm:flex-row gap-4">
         <button 
           onClick={handleViewWork} 
-          className="bg-accent text-primary px-8 py-3 rounded font-mono text-sm font-semibold transition-all duration-300 hover:bg-accent/90 hover:-translate-y-1"
+          className="bg-accent text-primary px-8 py-3 rounded font-mono text-sm font-semibold transition-all duration-300 hover:bg-accent/90 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20"
         >
           View My Work
         </button>
         <button 
           onClick={handleContactMe} 
-          className="bg-transparent text-text-primary px-8 py-3 rounded font-mono text-sm border border-text-primary/30 transition-all duration-300 hover:border-accent hover:text-accent hover:-translate-y-1"
+          className="bg-transparent text-text-primary px-8 py-3 rounded font-mono text-sm border border-text-primary/30 transition-all duration-300 hover:border-accent hover:text-accent hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/10"
         >
           Contact Me
         </button>
