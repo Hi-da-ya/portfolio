@@ -39,7 +39,7 @@ const Header = () => {
       {/* Social Icons */}
       <div className="flex gap-4 mb-8">
         <a 
-          href="https://github.com" 
+          href="https://github.com/Hi-da-ya" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-text-primary hover:text-accent transition-all duration-300 hover:-translate-y-1"
@@ -48,7 +48,7 @@ const Header = () => {
           <FaGithub size={24} />
         </a>
         <a 
-          href="https://linkedin.com" 
+          href="https://www.linkedin.com/in/hidaya-v-wetsakhulia-6a713a2b9/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-text-primary hover:text-accent transition-all duration-300 hover:-translate-y-1"
@@ -57,14 +57,14 @@ const Header = () => {
           <FaLinkedin size={24} />
         </a>
         <a 
-          href="mailto:your.email@example.com" 
+          href="mailto:hidayawetsa@gmail.com" 
           className="text-text-primary hover:text-accent transition-all duration-300 hover:-translate-y-1"
           aria-label="Email"
         >
           <FaEnvelope size={24} />
         </a>
         <a 
-          href="https://yourwebsite.com" 
+          href="https://portfoliowebsite.com" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-text-primary hover:text-accent transition-all duration-300 hover:-translate-y-1"
