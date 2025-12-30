@@ -7,6 +7,7 @@ import Header from './components/Header'
 import Terminal from './components/Terminal'
 import About from './components/About'
 import Projects from './components/Projects'
+import Experience from './components/Experience'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -23,6 +24,7 @@ function App() {
     </section>
     <About /> 
     <Projects/>
+    <Experience/>
     </>
   )
 }
