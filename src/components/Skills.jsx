@@ -1,11 +1,11 @@
 import React from 'react';
 
-const About = () => {
+const Skills = () => {
   // 1. Structured Data for the 4 Cards
   const skills = {
     fullStack: {
       title: "App Development",
-      items: ["JavaScript (ES6+)", "Python", "React.js", "Node.js", "Express.js", "Flask", "Django"]
+      items: ["JavaScript (ES6+)", "Python", "React.js", "Node.js", "Express.js", "Flask", "Django", "HTML", "CSS"]
     },
     security: {
       title: "Security & Auth",
@@ -43,13 +43,13 @@ const About = () => {
     <section id="about" className="py-20 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-12">
         <div className="max-w-7xl mx-auto">
-          <h2 className="section-title mb-12 md:mb-16">About</h2>
+          <h2 className="section-title mb-12 md:mb-16">Skills</h2>
           
           {/* Main Content Wrapper: Aligns text and grid together */}
           <div className="about-content"> 
             
             {/* Bio Text */}
-            <div className="about-text max-w-3xl mb-16 text-left">
+            {/* <div className="about-text max-w-3xl mb-16 text-left">
               <p className="text-text-secondary mb-6 leading-relaxed text-base md:text-lg">
                 Software Developer specializing in backend engineering, with experience designing and building APIs, authentication systems, and data-driven applications.
                 While my strength is backend development, I have hands-on experience working across the stack with familiarity in React for building user interfaces.
@@ -58,14 +58,14 @@ const About = () => {
                 Beyond the technical aspects, I enjoy building communities and contributing to spaces that encourage collective growth and meaningful impact. 
                 I'm especially drawn to projects that serve people and solve real problems.
               </p>
-            </div>
+            </div> */}
 
             {/* Bento Grid Layout */}
             <div>
               {/* Header for the Skills Section */}
-              <div className="font-mono text-sm text-text-secondary/70 mb-6 text-left">
+              {/* <div className="font-mono text-sm text-text-secondary/70 mb-6 text-left">
                 // current_stack_configuration
-              </div>
+              </div> */}
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 
@@ -106,4 +106,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Skills;
