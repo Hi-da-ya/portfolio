@@ -10,13 +10,7 @@ const Terminal = () => {
     "cat about.txt",
     ""
   ];
-  
-//   const terminalOutputs = [
-//     "software developer",
-//     "python node.js javascript  ",
-//     "Software developer with 7+ years of experience building scalable APIs and microservices.",
-//     ""
-//   ];
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -51,7 +45,7 @@ const Terminal = () => {
         <div className="terminal-window">
           <div className="terminal-top-bar bg-secondary px-5 py-3 flex items-center justify-between border-b border-terminal-border">
             <div className="terminal-title font-mono text-text-secondary text-sm">
-              <span className="text-accent">backenddev</span> - bash
+              <span className="text-accent">softwaredev</span> - bash
             </div>
             <div className="terminal-controls flex gap-2">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -74,7 +68,7 @@ const Terminal = () => {
             </div>
           </div>
           <div className="terminal-output text-text-secondary ml-5 mb-6">
-            backend developer
+            software developer
           </div>
           
           {/* Second command */}
@@ -91,7 +85,7 @@ const Terminal = () => {
           </div>
           <div className="terminal-output text-text-secondary ml-5 mb-6">
             <div className="skills-list flex flex-wrap gap-2 mt-1">
-              {['python', 'node.js', 'javascript '].map((skill) => (
+              {['python', 'javascript ', 'node.js', 'express.js', 'dbms', ].map((skill) => (
                 <span key={skill} className="skill-item text-accent">
                   {skill}
                 </span>
@@ -112,8 +106,12 @@ const Terminal = () => {
             </div>
           </div>
           <div className="terminal-output text-text-secondary ml-5 mb-6">
-            Backend engineer with 2+ years of experience<br />
-            building scalable APIs and microservices.
+            software developer specialising in backend development,<br />
+            experienced building scalable APIs and microservices.<br/>
+            Familiar with frontend technologies such as react and Tailwind for building ui<br/><br/>
+            beyond the technical aspects, I enjoy building communities and contributing to
+            spaces that encourage collective growth and meaningful impact. 
+                I'm especially drawn to projects that serve people and solve real problems.
           </div>
           
           {/* Current command with cursor */}
