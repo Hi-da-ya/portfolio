@@ -52,7 +52,6 @@ const Experience = () => {
       period: "April 2024 - Oct 2024",
       description: "Contributed to system configuration, testing, and process improvement initiatives.",
       achievements: [
-        // Rephrased "proposed amendments" to sound more proactive
         "Conducted comprehensive system testing to identify bugs and usability issues",
         "Proposed and implemented configuration improvements that enhanced system stability",
         "Assisted in the deployment and configuration of internal software tools"
@@ -61,64 +60,66 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 md:py-24 bg-primary/30">
+    <section id="experience" className="py-20 md:py-24 bg-[#0a192f] text-slate-300">
       <div className="container mx-auto px-4 md:px-6">
         
-        {/* Header */}
-        <div className="flex items-center mb-16">
-          <Briefcase className="text-accent mr-4" size={28} />
-          <h2 className="section-title mb-0">Work Experience</h2>
+        {/* Header - Matching the "Get In Touch" header style */}
+        <div className="flex items-center gap-4 mb-16">
+          <Briefcase className="text-cyan-400" size={32} />
+          <h2 className="text-3xl font-bold text-slate-100">Work Experience</h2>
         </div>
 
         {/* Timeline Container */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-5xl mx-auto">
           
-          {/* Central Line (Desktop) / Left Line (Mobile) */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-terminal-border/50"></div>
+          {/* Central Line - Darker Slate to match the theme */}
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-slate-700"></div>
 
           {experiences.map((exp, index) => (
             <div key={index} className={`relative flex flex-col md:flex-row items-center mb-12 md:mb-16 ${
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             }`}>
               
-              {/* 1. Timeline Dot */}
-              <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary border-2 border-accent rounded-full z-10 mt-1.5 md:mt-0"></div>
+              {/* Timeline Dot (Cyan Accent) */}
+              <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#0a192f] border-2 border-cyan-400 rounded-full z-10 mt-1.5 md:mt-0 shadow-[0_0_10px_rgba(34,211,238,0.4)]"></div>
 
-              {/* 2. Date (Desktop: Opposite side of card) */}
+              {/* Date Pill (Navy Bg + Cyan Text) */}
               <div className={`w-full md:w-1/2 pl-8 md:pl-0 ${
                 index % 2 === 0 ? 'md:pl-12 text-left' : 'md:pr-12 md:text-right'
               } mb-2 md:mb-0`}>
-                <span className="inline-flex items-center font-mono text-sm text-accent bg-secondary/50 px-3 py-1 rounded border border-terminal-border">
+                <span className="inline-flex items-center font-mono text-xs text-cyan-400 bg-[#112240] px-4 py-1.5 rounded-full border border-slate-700 shadow-sm">
                   <Calendar size={12} className="mr-2" />
                   {exp.period}
                 </span>
               </div>
 
-              {/* 3. Content Card */}
+              {/* Content Card (Lighter Navy Bg) */}
               <div className={`w-full md:w-1/2 pl-8 md:pl-0 ${
                 index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
               }`}>
-                <div className="bg-secondary/40 p-6 rounded-xl border border-terminal-border hover:border-accent/30 transition-all duration-300 shadow-lg group">
+                <div className="bg-[#112240] p-6 md:p-8 rounded-lg border border-slate-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl group hover:-translate-y-1">
                   
-                  {/* Role & Company */}
-                  <h3 className="text-xl font-bold text-gray-100 mb-1 group-hover:text-accent transition-colors">
+                  {/* Role (White) */}
+                  <h3 className="text-xl font-bold text-slate-100 mb-1 group-hover:text-cyan-400 transition-colors">
                     {exp.role}
                   </h3>
-                  <div className="text-md text-text-secondary font-mono mb-4">
-                     {exp.company}
+                  
+                  {/* Company (Cyan) */}
+                  <div className="text-sm font-mono text-cyan-400 mb-4 flex items-center">
+                    {exp.company}
                   </div>
 
-                  {/* Description */}
-                  <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                  {/* Description (Grey) */}
+                  <p className="text-slate-400 mb-5 leading-relaxed text-sm">
                     {exp.description}
                   </p>
 
                   {/* Achievements List */}
                   <ul className="space-y-2">
                     {exp.achievements.map((item, i) => (
-                      <li key={i} className="flex items-start text-sm text-text-secondary">
-                        <span className="text-accent mr-2 mt-1.5 text-[10px]">▹</span>
-                        {item}
+                      <li key={i} className="flex items-start text-sm text-slate-400">
+                        <span className="text-cyan-400 mr-3 mt-1.5 text-[10px]">▹</span>
+                        <span className="leading-relaxed">{item}</span>
                       </li>
                     ))}
                   </ul>
