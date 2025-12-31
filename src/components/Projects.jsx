@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, ExternalLink, Folder } from 'lucide-react'; // Assuming you are using lucide-react, or I can provide SVGs
+import {  ExternalLink, Folder } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -14,7 +14,7 @@ const Projects = () => {
         "Implemented Role-Based Access Control (RBAC) for sensitive data protection"
       ],
       tech: ["Python", "Flask", "SQL", "SMTP", "RBAC"],
-      links: { github: "#", live: "#" } // Add real links here
+      links: { github: "#", live: "#" } 
     },
     {
       title: "Food Court Management System",
@@ -44,13 +44,13 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 md:py-24">
+    <section id="projects" className="py-20 md:py-24 bg-[#0a192f] text-slate-300">
       <div className="container mx-auto px-4 md:px-6">
         
-        {/* Section Header */}
-        <div className="flex items-center mb-12">
-          <Folder className="text-accent mr-4" size={28} />
-          <h2 className="section-title mb-0">Featured Projects</h2>
+        {/* Section Header - Folder Icon + Cyan Accent */}
+        <div className="flex items-center gap-4 mb-12">
+          <Folder className="text-cyan-400" size={32} />
+          <h2 className="text-3xl font-bold text-slate-100">Featured Projects</h2>
         </div>
 
         {/* Projects Grid */}
@@ -58,55 +58,55 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group bg-secondary/40 rounded-xl border border-terminal-border p-6 md:p-8 hover:border-accent/50 transition-all duration-300 hover:bg-secondary/60 shadow-lg"
+              className="group bg-[#112240] rounded-xl p-6 md:p-8 hover:-translate-y-2 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10"
             >
               {/* Card Header: Title & Links */}
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-text-primary flex items-center gap-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-100 flex items-center gap-3">
                     {project.title}
-                    {/* Role Badge */}
-                    <span className="text-xs font-mono py-1 px-2 rounded bg-primary/30 text-accent border border-accent/20">
-                      {project.role}
-                    </span>
                   </h3>
+                  {/* Role Badge - Cyan Border/Text */}
+                  <span className="inline-block mt-2 text-xs font-mono py-1 px-2 rounded text-cyan-400 border border-cyan-400/30 bg-cyan-400/10">
+                    {project.role}
+                  </span>
                 </div>
                 
                 {/* Icons */}
-                <div className="flex gap-4 text-text-secondary">
-                  <a href={project.links.github} className="hover:text-accent transition-colors" aria-label="GitHub Repo">
-                    <Github size={20} />
+                <div className="flex gap-4 text-slate-400">
+                  <a href={project.links.github} className="hover:text-cyan-400 transition-colors" aria-label="GitHub Repo">
+                    <Github size={22} />
                   </a>
-                  <a href={project.links.live} className="hover:text-accent transition-colors" aria-label="Live Demo">
-                    <ExternalLink size={20} />
+                  <a href={project.links.live} className="hover:text-cyan-400 transition-colors" aria-label="Live Demo">
+                    <ExternalLink size={22} />
                   </a>
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-text-secondary mb-6 leading-relaxed">
+              <p className="text-slate-400 mb-6 leading-relaxed text-sm md:text-base">
                 {project.description}
               </p>
 
               {/* Highlights Section */}
               <div className="mb-6">
-                <h4 className="text-sm font-semibold text-accent mb-3 uppercase tracking-wider font-mono">Highlights:</h4>
+                <h4 className="text-sm font-mono text-cyan-400 mb-3">Highlights:</h4>
                 <ul className="space-y-2">
                   {project.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-text-secondary">
-                      <span className="text-accent mr-2 mt-1">▹</span>
-                      {highlight}
+                    <li key={idx} className="flex items-start text-sm text-slate-400">
+                      <span className="text-cyan-400 mr-2 mt-1">›</span>
+                      <span className="leading-relaxed">{highlight}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Tech Stack Tags */}
-              <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-terminal-border/50">
+              {/* Tech Stack Pills */}
+              <div className="flex flex-wrap gap-2 mt-auto pt-4">
                 {project.tech.map((tech, idx) => (
                   <span 
                     key={idx} 
-                    className="text-xs font-mono px-3 py-1 rounded-full bg-primary/50 text-text-secondary border border-terminal-border/50 group-hover:text-accent group-hover:border-accent/30 transition-colors"
+                    className="text-xs font-mono px-3 py-1 rounded-full bg-[#233554] text-cyan-300 hover:text-cyan-100 transition-colors cursor-default"
                   >
                     {tech}
                   </span>
