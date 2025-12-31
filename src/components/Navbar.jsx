@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { FaTerminal, FaTimes } from 'react-icons/fa';
+import { FaTerminal, FaTimes, FaSun } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('about');
+  const [activeSection, setActiveSection] = useState('home');
 
   const navItems = [
+    { label: 'Home', href: '#home', id: 'home' },
     { label: 'Skills', href: '#about', id: 'about' },
     { label: 'Projects', href: '#projects', id: 'projects' },
-    { label: 'Articles', href: '#articles', id: 'articles' },
     { label: 'Experience', href: '#experience', id: 'experience' },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ];
@@ -50,7 +50,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-primary/95 backdrop-blur-sm border-b border-terminal-border transition-all duration-300">
+    <nav className="fixed top-0 w-full z-50 bg-primary transition-all duration-300">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-12">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
@@ -58,46 +58,54 @@ const Navbar = () => {
             <a 
               href="#home" 
               onClick={(e) => handleNavClick(e, '#home', 'home')}
-              className="logo font-mono text-accent text-xl font-bold hover:opacity-80 transition-opacity duration-300"
+              className="logo font-mono text-text-primary text-xl font-bold hover:opacity-80 transition-opacity duration-300"
               aria-label="Back to home"
             >
-              <span className="text-accent">&gt; </span>softwareDev
+              ~/Hidaya Vanessa
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href, item.id)}
-                className={`font-mono text-sm transition-all duration-300 px-4 py-2 rounded-lg ${
+                className={`text-sm transition-all duration-300 ${
                   activeSection === item.id
-                    ? 'text-accent bg-accent/10 border border-accent/20'
-                    : 'text-text-primary hover:text-accent hover:bg-accent/5'
+                    ? 'text-accent'
+                    : 'text-text-primary hover:text-accent'
                 }`}
                 aria-current={activeSection === item.id ? 'page' : undefined}
               >
-                <span className="text-xs mr-1 opacity-60">$</span>
                 {item.label}
               </a>
             ))}
+
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-lg text-accent hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-colors duration-300"
-            aria-label="Toggle navigation menu"
-            aria-expanded={isMobileMenuOpen}
-          >
-            {isMobileMenuOpen ? (
-              <FaTimes className="w-6 h-6" />
-            ) : (
-              <FaTerminal className="w-6 h-6" />
-            )}
-          </button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              className="text-text-primary hover:text-accent transition-colors duration-300 p-2"
+              aria-label="Toggle theme"
+            >
+              <FaSun size={20} />
+            </button>
+            <button
+              onClick={toggleMobileMenu}
+              className="p-2 rounded-lg text-text-primary hover:text-accent focus:outline-none transition-colors duration-300"
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? (
+                <FaTimes className="w-6 h-6" />
+              ) : (
+                <FaTerminal className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -115,14 +123,13 @@ const Navbar = () => {
                   key={item.id}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href, item.id)}
-                  className={`font-mono text-sm transition-all duration-300 px-4 py-3 rounded-lg ${
+                  className={`font-mono text-sm transition-all duration-300 px-4 py-3 ${
                     activeSection === item.id
-                      ? 'text-accent bg-accent/10 border border-accent/20'
-                      : 'text-text-primary hover:text-accent hover:bg-accent/5'
+                      ? 'text-accent'
+                      : 'text-text-primary hover:text-accent'
                   }`}
                   aria-current={activeSection === item.id ? 'page' : undefined}
                 >
-                  <span className="text-xs mr-2 opacity-60">$</span>
                   {item.label}
                 </a>
               ))}

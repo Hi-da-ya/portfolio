@@ -63,7 +63,7 @@ const Projects = () => {
               {/* Card Header: Title & Links */}
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-100 flex items-center gap-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-text-primary flex items-center gap-3">
                     {project.title}
                     {/* Role Badge */}
                     <span className="text-xs font-mono py-1 px-2 rounded bg-primary/30 text-accent border border-accent/20">
@@ -93,7 +93,7 @@ const Projects = () => {
                 <h4 className="text-sm font-semibold text-accent mb-3 uppercase tracking-wider font-mono">Highlights:</h4>
                 <ul className="space-y-2">
                   {project.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-300">
+                    <li key={idx} className="flex items-start text-sm text-text-secondary">
                       <span className="text-accent mr-2 mt-1">▹</span>
                       {highlight}
                     </li>
