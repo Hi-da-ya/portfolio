@@ -70,7 +70,7 @@ const Header = () => {
           <Mail size={22} />
         </a>
         <a 
-          href="https://portfoliowebsite.com" 
+          href="https://dev.to/tech_with_nessah" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-[#a8b2d1] hover:text-[rgb(34,211,238)] transition-all duration-300 hover:-translate-y-1"

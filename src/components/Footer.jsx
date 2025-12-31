@@ -26,7 +26,7 @@ const Footer = () => {
     {
       name: 'Website',
       icon: Globe,
-      url: 'https://portfoliowebsite.com',
+      url: 'https://dev.to/tech_with_nessah',
       ariaLabel: 'Personal website'
     }
   ];
