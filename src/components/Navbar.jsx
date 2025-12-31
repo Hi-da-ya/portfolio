@@ -74,8 +74,8 @@ const Navbar = () => {
                 onClick={(e) => handleNavClick(e, item.href, item.id)}
                 className={`text-sm transition-all duration-300 ${
                   activeSection === item.id
-                    ? 'text-accent'
-                    : 'text-text-primary hover:text-accent'
+                    ? 'text-cyan-400'
+                    : 'text-text-primary hover:text-cyan-400'
                 }`}
                 aria-current={activeSection === item.id ? 'page' : undefined}
               >
@@ -88,14 +88,14 @@ const Navbar = () => {
           {/* Mobile Menu Button and Theme Toggle */}
           <div className="md:hidden flex items-center gap-2">
             <button
-              className="text-text-primary hover:text-accent transition-colors duration-300 p-2"
+              className="text-text-primary hover:text-cyan-400 transition-colors duration-300 p-2"
               aria-label="Toggle theme"
             >
               <FaSun size={20} />
             </button>
             <button
               onClick={toggleMobileMenu}
-              className="p-2 rounded-lg text-text-primary hover:text-accent focus:outline-none transition-colors duration-300"
+              className="p-2 rounded-lg text-text-primary hover:text-cyan-400 focus:outline-none transition-colors duration-300"
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -125,8 +125,8 @@ const Navbar = () => {
                   onClick={(e) => handleNavClick(e, item.href, item.id)}
                   className={`font-mono text-sm transition-all duration-300 px-4 py-3 ${
                     activeSection === item.id
-                      ? 'text-accent'
-                      : 'text-text-primary hover:text-accent'
+                      ? 'text-cyan-400'
+                      : 'text-text-primary hover:text-cyan-400'
                   }`}
                   aria-current={activeSection === item.id ? 'page' : undefined}
                 >

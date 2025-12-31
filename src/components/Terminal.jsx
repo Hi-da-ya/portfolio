@@ -45,7 +45,7 @@ const Terminal = () => {
         <div className="terminal-window">
           <div className="terminal-top-bar bg-secondary px-5 py-3 flex items-center justify-between border-b border-terminal-border">
             <div className="terminal-title font-mono text-text-secondary text-sm">
-              <span className="text-accent">softwaredev</span> - bash
+              <span className="text-cyan-400">softwaredev</span> - bash
             </div>
             <div className="terminal-controls flex gap-2">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -86,7 +86,7 @@ const Terminal = () => {
           <div className="terminal-output text-text-secondary ml-5 mb-6">
             <div className="skills-list flex flex-wrap gap-2 mt-1">
               {['python', 'javascript ', 'node.js', 'express.js', 'dbms', ].map((skill) => (
-                <span key={skill} className="skill-item text-accent">
+                <span key={skill} className="skill-item text-cyan-400">
                   {skill}
                 </span>
               ))}
