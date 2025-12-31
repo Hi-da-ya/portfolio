@@ -20,16 +20,16 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-24 bg-[#0a192f] text-slate-300">
-      <div className="container mx-auto px-6 md:px-6 max-w-6xl">
+    <section id="contact" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-[#0a192f] text-slate-300">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-6xl">
         
         {/* Section Header */}
-        <div className="flex items-center mb-12">
-          <MessageSquare className="text-cyan-400 mr-4" size={28} />
-          <h2 className="text-2xl font-bold text-slate-100">Get In Touch</h2>
+        <div className="flex items-center gap-3 md:gap-4 mb-10 md:mb-12">
+          <MessageSquare className="text-cyan-400" size={28} />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100">Get In Touch</h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           
           {/* LEFT COLUMN: Text & Code Snippet */}
           <div className="flex flex-col justify-between">
@@ -83,10 +83,10 @@ const Contact = () => {
           </div>
 
           {/* RIGHT COLUMN: The Clean Form */}
-          <div className="bg-[#112240] p-8 rounded-xl border border-slate-800 shadow-2xl">
-            <h3 className="text-xl font-bold text-slate-100 mb-6">Send a Message</h3>
+          <div className="bg-[#112240] p-6 md:p-8 rounded-xl border border-slate-800 shadow-2xl">
+            <h3 className="text-lg md:text-xl font-bold text-slate-100 mb-5 md:mb-6">Send a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               
               {/* Name */}
               <div>

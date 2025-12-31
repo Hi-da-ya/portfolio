@@ -44,21 +44,21 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 md:py-24 bg-[#0a192f] text-slate-300">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="projects" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-[#0a192f] text-slate-300">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         
         {/* Section Header - Folder Icon + Cyan Accent */}
-        <div className="flex items-center gap-4 mb-12">
-          <Folder className="text-cyan-400" size={32} />
-          <h2 className="text-3xl font-bold text-slate-100">Featured Projects</h2>
+        <div className="flex items-center gap-3 md:gap-4 mb-10 md:mb-12">
+          <Folder className="text-cyan-400" size={28} />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100">Featured Projects</h2>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 gap-6 md:gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group bg-[#112240] rounded-xl p-6 md:p-8 hover:-translate-y-2 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10"
+              className="group bg-[#112240] rounded-xl p-5 sm:p-6 md:p-8 hover:-translate-y-2 transition-all duration-300 shadow-xl hover:shadow-cyan-400/10"
             >
               {/* Card Header: Title & Links */}
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">

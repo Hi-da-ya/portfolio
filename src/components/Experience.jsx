@@ -60,13 +60,13 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 md:py-24 bg-[#0a192f] text-slate-300">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="experience" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-[#0a192f] text-slate-300">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         
         {/* Header - Matching the "Get In Touch" header style */}
-        <div className="flex items-center gap-4 mb-16">
-          <Briefcase className="text-cyan-400" size={32} />
-          <h2 className="text-3xl font-bold text-slate-100">Work Experience</h2>
+        <div className="flex items-center gap-3 md:gap-4 mb-12 md:mb-16">
+          <Briefcase className="text-cyan-400" size={28} />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100">Work Experience</h2>
         </div>
 
         {/* Timeline Container */}
@@ -95,9 +95,9 @@ const Experience = () => {
 
               {/* Content Card (Lighter Navy Bg) */}
               <div className={`w-full md:w-1/2 pl-8 md:pl-0 ${
-                index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
+                index % 2 === 0 ? 'md:pr-8 lg:pr-12' : 'md:pl-8 lg:pl-12'
               }`}>
-                <div className="bg-[#112240] p-6 md:p-8 rounded-lg border border-slate-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl group hover:-translate-y-1">
+                <div className="bg-[#112240] p-5 sm:p-6 md:p-8 rounded-lg border border-slate-800 hover:border-cyan-400/30 transition-all duration-300 shadow-xl group hover:-translate-y-1">
                   
                   {/* Role (White) */}
                   <h3 className="text-xl font-bold text-slate-100 mb-1 group-hover:text-cyan-400 transition-colors">
