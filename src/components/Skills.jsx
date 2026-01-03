@@ -45,7 +45,7 @@ const Skills = () => {
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="max-w-6xl mx-auto">
           
-          {/* Section Header with <> Icon */}
+          {/* Section Header */}
           <div className="flex items-center gap-3 md:gap-4 mb-10 md:mb-12">
             <Code className="text-cyan-400" size={28} />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100">Skills</h2>

@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Home', href: '#home', id: 'home' },
-    { label: 'Skills', href: '#about', id: 'about' },
+    { label: 'Skills', href: '#skills', id: 'skills' },
     { label: 'Projects', href: '#projects', id: 'projects' },
     { label: 'Experience', href: '#experience', id: 'experience' },
     { label: 'Contact', href: '#contact', id: 'contact' },
@@ -87,12 +87,6 @@ const Navbar = () => {
 
           {/* Mobile Menu Button and Theme Toggle */}
           <div className="md:hidden flex items-center gap-2">
-            <button
-              className="text-text-primary hover:text-cyan-400 transition-colors duration-300 p-2"
-              aria-label="Toggle theme"
-            >
-              <FaSun size={20} />
-            </button>
             <button
               onClick={toggleMobileMenu}
               className="p-2 rounded-lg text-text-primary hover:text-cyan-400 focus:outline-none transition-colors duration-300"

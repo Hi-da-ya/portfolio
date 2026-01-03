@@ -63,7 +63,7 @@ const Experience = () => {
     <section id="experience" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-[#0a192f] text-slate-300">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         
-        {/* Header - Matching the "Get In Touch" header style */}
+        {/* Header */}
         <div className="flex items-center gap-3 md:gap-4 mb-12 md:mb-16">
           <Briefcase className="text-cyan-400" size={28} />
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100">Work Experience</h2>

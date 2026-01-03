@@ -108,7 +108,7 @@ const Terminal = () => {
             </div>
           </div>
           <div className="terminal-output text-cyan-400 ml-4 md:ml-5 mb-4 md:mb-6">
-          I'm a software developer specialising in backend development,<br />
+          I'm a software developer specialising in backend development,
             experienced building scalable APIs and microservices.<br/>
             Familiar with frontend technologies such as react and Tailwind for building ui<br/><br/>
             Beyond the technical aspects, I enjoy building communities and contributing to
