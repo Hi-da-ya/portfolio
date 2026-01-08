@@ -9,14 +9,32 @@ const Contact = () => {
     message: ''
   });
 
+  const [status, setStatus] = useState('Idle');
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message Submitted');
+    setStatus('submitting'); 
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.status === 200) {
+        setStatus('success'); 
+        setFormData({ name: '', email: '', subject: '', message: '' }); 
+      } else {
+        setStatus('error'); 
+      }
+    } catch (error) {
+      setStatus('error'); 
+    }
   };
 
   return (
@@ -86,6 +104,11 @@ const Contact = () => {
           <div className="bg-[#112240] p-6 md:p-8 rounded-xl border border-slate-800 shadow-2xl">
             <h3 className="text-lg md:text-xl font-bold text-slate-100 mb-5 md:mb-6">Send a Message</h3>
             
+            {status === 'success' && (
+            <div className="bg-green-500/10 text-green-400 p-4 rounded-lg mb-6 border border-green-500/20">
+                Message sent successfully!
+            </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               
               {/* Name */}
