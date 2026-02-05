@@ -113,7 +113,7 @@ const Terminal = () => {
             Familiar with frontend technologies such as react and Tailwind for building ui<br/><br/>
             Beyond the technical aspects, I enjoy building communities and contributing to
             spaces that encourage collective growth and meaningful impact. 
-                I'm especially drawn to projects that serve people and solve real problems.
+              I'm especially drawn to projects that serve people and solve real problems.
           </div>
           
           {/* Current command with cursor */}
