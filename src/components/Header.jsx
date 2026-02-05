@@ -39,7 +39,7 @@ const Header = () => {
       
       {/* 4. Bio: Muted Slate + Monospace font */}
       <p className="text-[#8892b0] text-sm sm:text-base md:text-lg max-w-lg leading-relaxed mb-6 md:mb-8 font-mono">
-        I build robust software systems and scalable applications.
+        Harnessing technology to make life easier
       </p>
       
       {/* 5. Social Icons: Hover color RGB(34 211 238) */}
