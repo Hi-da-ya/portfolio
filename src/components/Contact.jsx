@@ -87,7 +87,7 @@ const Contact = () => {
                   <span className="text-slate-300">github:</span> <span className="text-green-400">"github.com/Hi-da-ya"</span>,
                 </div>
                 <div className="pl-4 mb-1">
-                  <span className="text-slate-300">linkedin:</span> <span className="text-green-400">"https://www.linkedin.com/in/hidaya-v-wetsakhulia-6a713a2b9/"</span>
+                  <span className="text-slate-300">linkedin:</span> <span className="text-green-400">"https://www.linkedin.com/in/hidaya-w-vanessa-6a713a2b9/"</span>
                 </div>
                 <div className="mb-4">
                   <span className="text-purple-400">{`}`}</span>;

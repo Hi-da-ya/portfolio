@@ -54,7 +54,7 @@ const Header = () => {
           <Github size={22} />
         </a>
         <a 
-          href="https://www.linkedin.com/in/hidaya-v-wetsakhulia-6a713a2b9/" 
+          href="www.linkedin.com/in/hidaya-w-vanessa-6a713a2b9" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-[#a8b2d1] hover:text-[rgb(34,211,238)] transition-all duration-300 hover:-translate-y-1"

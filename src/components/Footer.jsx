@@ -14,7 +14,7 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       icon: Linkedin,
-      url: 'https://www.linkedin.com/in/hidaya-v-wetsakhulia-6a713a2b9/',
+      url: 'www.linkedin.com/in/hidaya-w-vanessa-6a713a2b9',
       ariaLabel: 'LinkedIn profile'
     },
     {
